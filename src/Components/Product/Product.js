@@ -2,10 +2,14 @@ import React from 'react';
 import './Product.css'
 
 const Product = (props) => {
-    // console.log(props)
+
+    console.log(props)
+    
+
     //? As data obj hisebe ase so amra obj declar korlam
 
     const {name,img,price,ratings,seller} = props.sendProps;     //?Show.js theke product pathano hoiche
+
     return (
         <div className='product'>
              <img src={img} alt="" />
@@ -15,8 +19,8 @@ const Product = (props) => {
                 <h5>Manufacture: {seller}</h5>
                 <h5>Rating: {ratings} Stars</h5>
             </div>
-            <button className='btn'>
-                <p className='cart'>Add to cart</p>
+            <button onClick={props.returnHandleAddToCart} className='btn' >
+                <p >Add to cart</p>
             </button>    
         </div>
     );
