@@ -10,7 +10,7 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
-    const handleAddToCart =() =>{
+    const handleAddToCart =(product) =>{
         console.log('Clicked');
     }
     return (

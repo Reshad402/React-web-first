@@ -3,7 +3,7 @@ import './Product.css'
 
 const Product = (props) => {
 
-    console.log(props)
+    // console.log(props)
     
 
     //? As data obj hisebe ase so amra obj declar korlam
@@ -19,7 +19,7 @@ const Product = (props) => {
                 <h5>Manufacture: {seller}</h5>
                 <h5>Rating: {ratings} Stars</h5>
             </div>
-            <button onClick={props.returnHandleAddToCart} className='btn' >
+            <button onClick={() => props.returnHandleAddToCart(props.product)} className='btn' >
                 <p >Add to cart</p>
             </button>    
         </div>
