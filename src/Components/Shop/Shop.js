@@ -10,8 +10,8 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
-    const handleAddToCart =(product) =>{
-        console.log('Clicked');
+    const handleAddToCart =(sendProps) =>{
+        console.log(sendProps);
     }
     return (
         <div className='shop-container'>
