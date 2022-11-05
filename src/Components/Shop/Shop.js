@@ -27,13 +27,15 @@ const Shop = () => {
                             sendProps ={product}                //!product is declared as variable and sendProps is just name to use other function
                             key={product.key}                   //! Unique key is declared =>var.key
                             returnHandleAddToCart={handleAddToCart}         //!Declaring the cart function and 
+                            cart={cart}
                             >        
                             </Product>)
                     }
             </div>
             {/* //! This is the another state part */}
+
             <div className="cart-container">
-                    <Cart cart={cart}></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
