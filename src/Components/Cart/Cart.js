@@ -22,7 +22,10 @@ const Cart = ({cart}) => {      //? Cart অবশ্যই সেকেন্�
                             //?Tax amount added
 
         const tax = total*.10;
-           const grandTotal = tax + shipping+ total;
+
+                            //?Grand total added
+        const grandTotal = tax + shipping+ total;
+           
 
     return (
         <div className='cart'>
@@ -31,7 +34,7 @@ const Cart = ({cart}) => {      //? Cart অবশ্যই সেকেন্�
                 <p>Selected items: {cart.length}</p>
                 <p>Total price :{total}</p>
                 <p>Total Shipping:{shipping}</p>
-                <p>Tax:{tax}</p>
+                <p>Tax:{tax.toFixed(2)}</p>       
                 <h5>Grand total:{grandTotal}</h5>
         </div>
     );
